@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 3</title>
+
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <h1>String Duplication</h1>
+      
+      <form v-on:submit.prevent="onSubmit"></form>
+      <label for="Message">Message:</label><br><br>
+      <input v-model="Message" placeholder="Hello World!"/><br><br>
+      <label for="Times">Times:</label><br><br>
+      <input v-model.number="Times" placeholder="100"/><br><br>
+
+      <button class="button" @click="duplicateMessage">Do IT!!</button><br><br>
+
+      <div class="result">{{result}} </div>
+
+
+    </form>
+    </div>
+
+
+
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App-->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+
+  </body>
+</html>
